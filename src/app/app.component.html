@@ -1,12 +1,16 @@
-<div>
-<h1>To do list</h1>
+<style>
+    #main {
+        margin: 20px;
+    }
+</style>
+<div id="main">
+<h1 style="font-weight:400;">To do list</h1>
+    <div>
+        <input type="text" placeholder="Add task here" [(ngModel)]="task">
+        <button type="button" id="addButton">Add</button><br>
 
-<div>
-    <input type="text" placeholder="Add task here" [(ngModel)]="task">
-    <button type="button" (click)="todoListAdd(task)">Add</button><br>
-
-    <app-todo-list [todoList]="todoList"></app-todo-list>
-</div>
+        <app-todo-list [todoList]="todoList"></app-todo-list>
+    </div>
 </div>
 
 <router-outlet></router-outlet>

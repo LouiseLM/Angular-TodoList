@@ -15,8 +15,8 @@ export class TodoElementComponent implements OnInit {
 
   @Input() task:TaskModel = {} as TaskModel;
 
-  doneTask(o:TaskModel): void {
-    o.done = !o.done;
+  doneTask(t:TaskModel): void {
+    t.done = !t.done;
   }
 
 }

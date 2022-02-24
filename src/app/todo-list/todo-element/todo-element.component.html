@@ -1,2 +1,8 @@
+<style>
+    #task {
+        margin-left: 8px;
+    }
+</style>
 <label for="task">{{task.taskName}}</label>
-<mat-checkbox class="example-margin" id="task" (click)="doneTask(task)"></mat-checkbox>
+<input type="checkbox" id="task" (click)="doneTask(task)">
+<!-- <mat-checkbox class="example-margin" id="task" (click)="doneTask(task)"></mat-checkbox> -->
