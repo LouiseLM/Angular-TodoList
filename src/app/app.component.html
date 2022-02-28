@@ -7,7 +7,7 @@
 <h1 style="font-weight: 500; font-size: xx-large;">To do list</h1>
     <div>
         <input type="text" placeholder="Add task here" [(ngModel)]="task">
-        <button type="button" id="addButton">Add</button><br>
+        <button mat-mini-fab color="primary" id="addButton" style="margin-left: 3px;">+</button><br>
 
         <app-todo-list [todoList]="todoList"></app-todo-list>
     </div>
