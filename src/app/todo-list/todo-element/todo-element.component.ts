@@ -7,7 +7,7 @@ import { fromEvent } from 'rxjs'
   templateUrl: './todo-element.component.html',
   styleUrls: ['./todo-element.component.scss']
 })
-export class TodoElementComponent implements OnInit, AfterViewInit {
+export class TodoElementComponent implements OnInit {
 
   constructor() { }
 
@@ -18,14 +18,6 @@ export class TodoElementComponent implements OnInit, AfterViewInit {
 
   doneTask(t:TaskModel): void {
     t.done = !t.done;
+    console.log(t)
   }
-
-  ngAfterViewInit(): void {
-    const checkbox = document.getElementById("task") as HTMLElement;
-
-    const myObservable = fromEvent(checkbox, 'click');
-  
-    const subscription = myObservable.subscribe(event => this.doneTask(this.task));
-  }
-
 }
