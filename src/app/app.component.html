@@ -1,8 +1,8 @@
 <div id="main">
-<h1 id="title">To do list</h1>
+    <h1 id="title">To do list</h1>
     <div>
         <input type="text" placeholder="Add task here" [(ngModel)]="task">
-        <button mat-mini-fab color="primary" id="addButton">+</button><br>
+        <button mat-mini-fab color="primary" id="addButton" class="addButton">+</button><br>
 
         <app-todo-list [todoList]="todoList"></app-todo-list>
     </div>

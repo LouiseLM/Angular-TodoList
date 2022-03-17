@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
 import { TaskModel } from './shared/general.model';
-import { fromEvent, Observable, Subscriber, Subscription } from 'rxjs'
+import { fromEvent, Subscription } from 'rxjs'
 
 @Component({
   selector: 'app-root',
@@ -12,9 +12,14 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   todoList:Array<TaskModel> = [];
   task:string = '';
   subscription = new Subscription;
+  
+  //TODO make this work
+  //@ViewChild('addButton')
+  //addButton!: ElementRef;
 
   todoListAdd(s:string): void {
     this.todoList.push(new TaskModel(s));
+    console.log(this.todoList)
   }
 
   ngAfterViewInit(): void {
